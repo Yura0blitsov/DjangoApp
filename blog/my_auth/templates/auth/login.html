@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Вход</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <p>Имя пользователя</p>
+                    {{ form.username }}<br>
+                <p>Пароль</p>
+                    {{ form.password }}<br>
+                <p></p>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-success" type="submit">Войти</button>
+            </div>
+        </form>
+        </form>
+    </div>
+{% endblock %}

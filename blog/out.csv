@@ -1,0 +1,2 @@
+filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,line_range,more_info
+blog/settings.py,hardcoded_password_string,B105,LOW,MEDIUM,https://cwe.mitre.org/data/definitions/259.html,Possible hardcoded password: 'django-insecure-x&ag@fg-^lm-xf-w(g5x&qo8re&g44=5p4o@km=t6sqd!852=g',23,13,"[23, 24, 25]",https://bandit.readthedocs.io/en/1.7.4/plugins/b105_hardcoded_password_string.html

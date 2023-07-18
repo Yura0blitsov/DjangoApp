@@ -1,0 +1,28 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Поиск{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Поиск</h1>
+        <nav>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск" name="search">
+                <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
+        </nav>
+            <p>{{ search }}</p>
+            {% if news %}
+            {% for el in news %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                    <p>{{ el.author }}</p>
+                    <a href="{% url 'news-detail' el.id %}"><button class="btn btn-warning">Подробнее</button></a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Записи отсутствуют</p>
+        {% endif %}
+    </div>
+{% endblock %}
